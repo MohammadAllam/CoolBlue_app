@@ -1,6 +1,7 @@
 # CoolBlue
 
 This is a search app consists of two screens:
+
   - Search screen : Searching and listing matching products to the user.
   - Details screen : Displaying detailed product inforamtion.
 
