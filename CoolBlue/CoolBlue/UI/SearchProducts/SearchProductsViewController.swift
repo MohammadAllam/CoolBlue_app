@@ -47,6 +47,8 @@ class SearchProductsViewController: UIViewController {
 
         searchBar.rx
             .text.orEmpty
+            .throttle(0.5, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
             .debug("binding searchBar")
             .bind(to: inputs.query)
             .disposed(by: disposeBag)
