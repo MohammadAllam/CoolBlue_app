@@ -51,7 +51,7 @@
                     <navigationItem key="navigationItem" id="w0y-rn-JVB"/>
                     <connections>
                         <outlet property="searchBar" destination="ur3-uQ-9ii" id="Abc-Jw-LKV"/>
-                        <outlet property="tableview" destination="5fc-Rj-HIe" id="PU4-hN-Auu"/>
+                        <outlet property="tableView" destination="5fc-Rj-HIe" id="H2x-hc-thi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

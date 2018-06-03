@@ -12,11 +12,20 @@ import RxSwift
 protocol SearchViewModelInput{
     /// Updated when the entered search text chnages
     var query: BehaviorSubject<String> { get }
+
+    /// Call when the bottom of the list is reached
+    var loadMore: BehaviorSubject<Bool> { get }
+
+    /// Call when new query is entered
+    func newQuery()
 }
 
 protocol SearchViewModelOutput{
     /// Emits an array of products for the tableview
     var products: Observable<[String]>! { get }
+
+    /// Emits a boolean when executing search query.
+    var isNewQuery: Observable<Bool>! { get }
 }
 
 protocol SearchViewModelType {
@@ -34,43 +43,73 @@ SearchViewModelOutput{
 
     // MARK: Input
     let query = BehaviorSubject<String>(value: "")
+    let loadMore = BehaviorSubject<Bool>(value: false)
+
+    func newQuery(){
+        newQueryProperty.onNext(true)
+    }
 
     // MARK: Output
-    var products: Observable<[String]>!{
-        return productsProperty.asObservable()
-    }
+    var products: Observable<[String]>!
+    var isNewQuery: Observable<Bool>!
 
     // MARK: Private
     private var productService:ProductServiceType
-    private var productsProperty = Variable<[String]>([])
     private var productsList = [String]([])
+    private let newQueryProperty = BehaviorSubject<Bool>(value: true)
 
     // MARK: Init
     init(inputService:ProductServiceType = ProductService(),
-        disposeBag:DisposeBag) {
+         disposeBag:DisposeBag) {
 
         productService = inputService
 
-        query.asObservable()
-            .subscribe(onNext: { [unowned self] queryString in
-                guard !queryString.isEmpty else {
-                    self.productsProperty.value = []
-                    return
-                }
-                self.productService.discoverProducts(with: queryString,
-                                                                     page: 1)
-                    .subscribe(onNext: { (products) in
-                        var tempList = [String]()
-                        products.forEach({ productObj in
-                            if let name = productObj.productName{
-                                tempList.append(name)
-                            }
-                        })
-                        self.productsProperty.value = tempList
-                    })
-                .disposed(by: disposeBag)
+        var currentPageIndex = 1
+        isNewQuery = newQueryProperty.asObservable()
+
+        let searchRequest = Observable
+            .combineLatest(isNewQuery, query)
+            .flatMapLatest { isNewQuery, query -> Observable<[Product]> in
+                guard query.count > 0 else { return .empty() }
+                guard isNewQuery else { return .empty() }
+                return self.productService
+                    .discoverProducts(with: query,
+                                      page: 1)
+                    .asObservable()
+            }
+            .do (onNext: { [unowned self] _ in
+                self.productsList = []
+                currentPageIndex = 1
             })
-            .disposed(by: disposeBag)
+
+        let loadMoreRequest = Observable
+            .combineLatest(loadMore, query)
+            .flatMapLatest { [unowned self] loadMore, query -> Observable<[Product]> in
+                guard query.count > 0 else { return .empty() }
+                guard loadMore else { return .empty() }
+                currentPageIndex += 1
+                return self.productService
+                    .discoverProducts(with: query,
+                                      page: currentPageIndex)
+                    .asObservable()
+        }
+
+        products = Observable
+            .merge(searchRequest, loadMoreRequest)
+            .map({ [unowned self] products -> [String] in
+                products.forEach { [unowned self] product in
+                    if let name = product.productName{
+                        self.productsList.append(name)
+                    }
+                }
+                self.newQueryProperty.onNext(false)
+                return self.productsList
+            })
+            .catchError({ [unowned self] error in
+                //                self.alertAction.execute(error.localizedDescription)
+                self.newQueryProperty.onNext(false)
+                return Observable.just(self.productsList)
+            })
 
     }
 }
