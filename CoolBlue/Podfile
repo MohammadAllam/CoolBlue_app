@@ -11,6 +11,9 @@ target 'CoolBlue' do
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
 
+  # UI
+  pod 'AlamofireImage'
+
   target 'CoolBlueTests' do
     inherit! :search_paths
     # Pods for testing

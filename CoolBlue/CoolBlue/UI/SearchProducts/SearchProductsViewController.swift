@@ -74,5 +74,17 @@ class SearchProductsViewController: UIViewController {
         tableView.estimatedRowHeight = 40
         tableView.rowHeight = UITableViewAutomaticDimension
     }
+
+    // MARK: Navigation
+    @IBAction func unwindToSearchVC(segue:UIStoryboardSegue){
+
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow{
+            let destinationVC = segue.destination as! ProductViewController
+            destinationVC.setDisplayedProduct(with: viewModel.getProduct(atIndex: indexPath.row))
+        }
+    }
 }
 

@@ -27,7 +27,20 @@ class ProductService:ProductServiceType {
             .map([Product].self, atKeyPath:"products")
             .asObservable()
             .catchError { error in
-                return .just([])
+                return .error(error)
+        }
+    }
+
+    func productDetails(with productID: Int) -> Observable<Product> {
+
+        return service.rx
+            .request(.productDetails(productID:productID))
+            .debug("ProductAPIProvider : productDetails")
+            .filterSuccessfulStatusCodes()
+            .map(Product.self, atKeyPath:"product")
+            .asObservable()
+            .catchError { error in
+                return .error(error)
         }
     }
 }

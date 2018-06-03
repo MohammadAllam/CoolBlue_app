@@ -11,6 +11,7 @@ import Moya
 
 enum CoolBlueAPI {
     case discoverProduct(query:String?,page:Int?)
+    case productDetails(productID:Int)
 }
 
 extension CoolBlueAPI:TargetType{
@@ -23,12 +24,15 @@ extension CoolBlueAPI:TargetType{
         switch self {
         case .discoverProduct:
             return CoolBlueAPIConstants.API_DISCOVER_PRODUCT
+        case .productDetails(let productID):
+            return CoolBlueAPIConstants.API_PRODUCT_DETAILS + String(productID)
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .discoverProduct:
+        case .discoverProduct,
+             .productDetails:
             return .get
         }
     }
@@ -44,6 +48,8 @@ extension CoolBlueAPI:TargetType{
             paramsDic[CoolBlueAPIConstants.PARAM_API_QUERY] = query
             paramsDic[CoolBlueAPIConstants.PARAM_PAGE_KEY] = page
             return .requestParameters(parameters: paramsDic, encoding: URLEncoding.default)
+        case .productDetails:
+            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         }
     }
 
