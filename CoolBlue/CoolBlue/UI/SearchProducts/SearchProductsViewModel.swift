@@ -22,7 +22,7 @@ protocol SearchViewModelInput{
 
 protocol SearchViewModelOutput{
     /// Emits an array of products for the tableview
-    var products: Observable<[String]>! { get }
+    var products: Observable<[Product]>! { get }
 
     /// Emits a boolean when executing search query.
     var isNewQuery: Observable<Bool>! { get }
@@ -50,12 +50,12 @@ SearchViewModelOutput{
     }
 
     // MARK: Output
-    var products: Observable<[String]>!
+    var products: Observable<[Product]>!
     var isNewQuery: Observable<Bool>!
 
     // MARK: Private
     private var productService:ProductServiceType
-    private var productsList = [String]([])
+    private var productsList = [Product]([])
     private let newQueryProperty = BehaviorSubject<Bool>(value: true)
 
     // MARK: Init
@@ -96,11 +96,9 @@ SearchViewModelOutput{
 
         products = Observable
             .merge(searchRequest, loadMoreRequest)
-            .map({ [unowned self] products -> [String] in
+            .map({ [unowned self] products -> [Product] in
                 products.forEach { [unowned self] product in
-                    if let name = product.productName{
-                        self.productsList.append(name)
-                    }
+                    self.productsList.append(product)
                 }
                 self.newQueryProperty.onNext(false)
                 return self.productsList
