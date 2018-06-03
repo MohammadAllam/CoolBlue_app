@@ -1,0 +1,779 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24D2F11D26D22B33726E72A6 /* Pods_CoolBlue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6EF0D9DA3A8188E6107C3E /* Pods_CoolBlue.framework */; };
+		5A5C9B1F20C3918C0067BEAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B1E20C3918C0067BEAA /* AppDelegate.swift */; };
+		5A5C9B2420C3918C0067BEAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A5C9B2220C3918C0067BEAA /* Main.storyboard */; };
+		5A5C9B2620C3918C0067BEAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A5C9B2520C3918C0067BEAA /* Assets.xcassets */; };
+		5A5C9B2920C3918C0067BEAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A5C9B2720C3918C0067BEAA /* LaunchScreen.storyboard */; };
+		5A5C9B3420C3918C0067BEAA /* CoolBlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B3320C3918C0067BEAA /* CoolBlueTests.swift */; };
+		5A5C9B3F20C3918C0067BEAA /* CoolBlueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B3E20C3918C0067BEAA /* CoolBlueUITests.swift */; };
+		5D98299A4FF9C4F3E0797513 /* Pods_CoolBlueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EE1ECA80EDF75B4CAC8BFB /* Pods_CoolBlueUITests.framework */; };
+		8AABCE056D7EC99E03F5ACCD /* Pods_CoolBlueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D3662A99F5ECC2748D3D84 /* Pods_CoolBlueTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A5C9B3020C3918C0067BEAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A5C9B1320C3918C0067BEAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A5C9B1A20C3918C0067BEAA;
+			remoteInfo = CoolBlue;
+		};
+		5A5C9B3B20C3918C0067BEAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A5C9B1320C3918C0067BEAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A5C9B1A20C3918C0067BEAA;
+			remoteInfo = CoolBlue;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A6EF0D9DA3A8188E6107C3E /* Pods_CoolBlue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolBlue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2906112FF02AF35E3E5BAF2B /* Pods-CoolBlue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlue.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue.release.xcconfig"; sourceTree = "<group>"; };
+		44EE1ECA80EDF75B4CAC8BFB /* Pods_CoolBlueUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolBlueUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A5C9B1B20C3918C0067BEAA /* CoolBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A5C9B1E20C3918C0067BEAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A5C9B2320C3918C0067BEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A5C9B2520C3918C0067BEAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A5C9B2820C3918C0067BEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A5C9B2A20C3918C0067BEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A5C9B2F20C3918C0067BEAA /* CoolBlueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolBlueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A5C9B3320C3918C0067BEAA /* CoolBlueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolBlueTests.swift; sourceTree = "<group>"; };
+		5A5C9B3520C3918C0067BEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A5C9B3A20C3918C0067BEAA /* CoolBlueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolBlueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A5C9B3E20C3918C0067BEAA /* CoolBlueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolBlueUITests.swift; sourceTree = "<group>"; };
+		5A5C9B4020C3918C0067BEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BBEF1C05DFB5F2D049F4B2F /* Pods-CoolBlue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue.debug.xcconfig"; sourceTree = "<group>"; };
+		A73628B058821C3B8D77FB16 /* Pods-CoolBlueUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueUITests/Pods-CoolBlueUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A8BB9D47D41B2311B787F61E /* Pods-CoolBlueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueTests/Pods-CoolBlueTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B87A132024FE81A08C37AA1C /* Pods-CoolBlueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueTests/Pods-CoolBlueTests.release.xcconfig"; sourceTree = "<group>"; };
+		F5B7C489E5ABE7CCEFDE00AC /* Pods-CoolBlueUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueUITests/Pods-CoolBlueUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7D3662A99F5ECC2748D3D84 /* Pods_CoolBlueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolBlueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A5C9B1820C3918C0067BEAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D2F11D26D22B33726E72A6 /* Pods_CoolBlue.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A5C9B2C20C3918C0067BEAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AABCE056D7EC99E03F5ACCD /* Pods_CoolBlueTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A5C9B3720C3918C0067BEAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D98299A4FF9C4F3E0797513 /* Pods_CoolBlueUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A5C9B1220C3918C0067BEAA = {
+			isa = PBXGroup;
+			children = (
+				5A5C9B1D20C3918C0067BEAA /* CoolBlue */,
+				5A5C9B3220C3918C0067BEAA /* CoolBlueTests */,
+				5A5C9B3D20C3918C0067BEAA /* CoolBlueUITests */,
+				5A5C9B1C20C3918C0067BEAA /* Products */,
+				F9A6E414A7F734CA7525B687 /* Pods */,
+				B40D5F67CC8BC7D0E9AC8653 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5A5C9B1C20C3918C0067BEAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A5C9B1B20C3918C0067BEAA /* CoolBlue.app */,
+				5A5C9B2F20C3918C0067BEAA /* CoolBlueTests.xctest */,
+				5A5C9B3A20C3918C0067BEAA /* CoolBlueUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A5C9B1D20C3918C0067BEAA /* CoolBlue */ = {
+			isa = PBXGroup;
+			children = (
+				5A5C9B4E20C3929C0067BEAA /* Models */,
+				5A5C9B4D20C392950067BEAA /* Services */,
+				5A5C9B4C20C3928B0067BEAA /* UI */,
+				5A5C9B1E20C3918C0067BEAA /* AppDelegate.swift */,
+				5A5C9B2520C3918C0067BEAA /* Assets.xcassets */,
+				5A5C9B2A20C3918C0067BEAA /* Info.plist */,
+			);
+			path = CoolBlue;
+			sourceTree = "<group>";
+		};
+		5A5C9B3220C3918C0067BEAA /* CoolBlueTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A5C9B3320C3918C0067BEAA /* CoolBlueTests.swift */,
+				5A5C9B3520C3918C0067BEAA /* Info.plist */,
+			);
+			path = CoolBlueTests;
+			sourceTree = "<group>";
+		};
+		5A5C9B3D20C3918C0067BEAA /* CoolBlueUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5A5C9B3E20C3918C0067BEAA /* CoolBlueUITests.swift */,
+				5A5C9B4020C3918C0067BEAA /* Info.plist */,
+			);
+			path = CoolBlueUITests;
+			sourceTree = "<group>";
+		};
+		5A5C9B4C20C3928B0067BEAA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5A5C9B2220C3918C0067BEAA /* Main.storyboard */,
+				5A5C9B2720C3918C0067BEAA /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5A5C9B4D20C392950067BEAA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5A5C9B4E20C3929C0067BEAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B40D5F67CC8BC7D0E9AC8653 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A6EF0D9DA3A8188E6107C3E /* Pods_CoolBlue.framework */,
+				F7D3662A99F5ECC2748D3D84 /* Pods_CoolBlueTests.framework */,
+				44EE1ECA80EDF75B4CAC8BFB /* Pods_CoolBlueUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9A6E414A7F734CA7525B687 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BBEF1C05DFB5F2D049F4B2F /* Pods-CoolBlue.debug.xcconfig */,
+				2906112FF02AF35E3E5BAF2B /* Pods-CoolBlue.release.xcconfig */,
+				A8BB9D47D41B2311B787F61E /* Pods-CoolBlueTests.debug.xcconfig */,
+				B87A132024FE81A08C37AA1C /* Pods-CoolBlueTests.release.xcconfig */,
+				F5B7C489E5ABE7CCEFDE00AC /* Pods-CoolBlueUITests.debug.xcconfig */,
+				A73628B058821C3B8D77FB16 /* Pods-CoolBlueUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A5C9B1A20C3918C0067BEAA /* CoolBlue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A5C9B4320C3918C0067BEAA /* Build configuration list for PBXNativeTarget "CoolBlue" */;
+			buildPhases = (
+				2C8657E1C56C51DF0DAF37A1 /* [CP] Check Pods Manifest.lock */,
+				5A5C9B1720C3918C0067BEAA /* Sources */,
+				5A5C9B1820C3918C0067BEAA /* Frameworks */,
+				5A5C9B1920C3918C0067BEAA /* Resources */,
+				C92F1CAD4D01A71416D34D68 /* [CP] Embed Pods Frameworks */,
+				D8C8C493C6C6F5D8ACC87729 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoolBlue;
+			productName = CoolBlue;
+			productReference = 5A5C9B1B20C3918C0067BEAA /* CoolBlue.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A5C9B2E20C3918C0067BEAA /* CoolBlueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A5C9B4620C3918C0067BEAA /* Build configuration list for PBXNativeTarget "CoolBlueTests" */;
+			buildPhases = (
+				0A512148D7067E3FBE7E935D /* [CP] Check Pods Manifest.lock */,
+				5A5C9B2B20C3918C0067BEAA /* Sources */,
+				5A5C9B2C20C3918C0067BEAA /* Frameworks */,
+				5A5C9B2D20C3918C0067BEAA /* Resources */,
+				E77F18980E8104F04BF31E28 /* [CP] Embed Pods Frameworks */,
+				283D623E8FB584480114B97D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A5C9B3120C3918C0067BEAA /* PBXTargetDependency */,
+			);
+			name = CoolBlueTests;
+			productName = CoolBlueTests;
+			productReference = 5A5C9B2F20C3918C0067BEAA /* CoolBlueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A5C9B3920C3918C0067BEAA /* CoolBlueUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A5C9B4920C3918C0067BEAA /* Build configuration list for PBXNativeTarget "CoolBlueUITests" */;
+			buildPhases = (
+				BC216C685845C3B98E562F90 /* [CP] Check Pods Manifest.lock */,
+				5A5C9B3620C3918C0067BEAA /* Sources */,
+				5A5C9B3720C3918C0067BEAA /* Frameworks */,
+				5A5C9B3820C3918C0067BEAA /* Resources */,
+				3089ACDE8C3FA3D0C69B4A61 /* [CP] Embed Pods Frameworks */,
+				DEAC4871D839F1AAE9C42626 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A5C9B3C20C3918C0067BEAA /* PBXTargetDependency */,
+			);
+			name = CoolBlueUITests;
+			productName = CoolBlueUITests;
+			productReference = 5A5C9B3A20C3918C0067BEAA /* CoolBlueUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A5C9B1320C3918C0067BEAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Allam;
+				TargetAttributes = {
+					5A5C9B1A20C3918C0067BEAA = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					5A5C9B2E20C3918C0067BEAA = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5A5C9B1A20C3918C0067BEAA;
+					};
+					5A5C9B3920C3918C0067BEAA = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5A5C9B1A20C3918C0067BEAA;
+					};
+				};
+			};
+			buildConfigurationList = 5A5C9B1620C3918C0067BEAA /* Build configuration list for PBXProject "CoolBlue" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A5C9B1220C3918C0067BEAA;
+			productRefGroup = 5A5C9B1C20C3918C0067BEAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A5C9B1A20C3918C0067BEAA /* CoolBlue */,
+				5A5C9B2E20C3918C0067BEAA /* CoolBlueTests */,
+				5A5C9B3920C3918C0067BEAA /* CoolBlueUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A5C9B1920C3918C0067BEAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A5C9B2920C3918C0067BEAA /* LaunchScreen.storyboard in Resources */,
+				5A5C9B2620C3918C0067BEAA /* Assets.xcassets in Resources */,
+				5A5C9B2420C3918C0067BEAA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A5C9B2D20C3918C0067BEAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A5C9B3820C3918C0067BEAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A512148D7067E3FBE7E935D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoolBlueTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		283D623E8FB584480114B97D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlueTests/Pods-CoolBlueTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C8657E1C56C51DF0DAF37A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoolBlue-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3089ACDE8C3FA3D0C69B4A61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlueUITests/Pods-CoolBlueUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC216C685845C3B98E562F90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoolBlueUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C92F1CAD4D01A71416D34D68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8C8C493C6C6F5D8ACC87729 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEAC4871D839F1AAE9C42626 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlueUITests/Pods-CoolBlueUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E77F18980E8104F04BF31E28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlueTests/Pods-CoolBlueTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A5C9B1720C3918C0067BEAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A5C9B1F20C3918C0067BEAA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A5C9B2B20C3918C0067BEAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A5C9B3420C3918C0067BEAA /* CoolBlueTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A5C9B3620C3918C0067BEAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A5C9B3F20C3918C0067BEAA /* CoolBlueUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A5C9B3120C3918C0067BEAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A5C9B1A20C3918C0067BEAA /* CoolBlue */;
+			targetProxy = 5A5C9B3020C3918C0067BEAA /* PBXContainerItemProxy */;
+		};
+		5A5C9B3C20C3918C0067BEAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A5C9B1A20C3918C0067BEAA /* CoolBlue */;
+			targetProxy = 5A5C9B3B20C3918C0067BEAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A5C9B2220C3918C0067BEAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A5C9B2320C3918C0067BEAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A5C9B2720C3918C0067BEAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A5C9B2820C3918C0067BEAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A5C9B4120C3918C0067BEAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A5C9B4220C3918C0067BEAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A5C9B4420C3918C0067BEAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BBEF1C05DFB5F2D049F4B2F /* Pods-CoolBlue.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoolBlue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Allam.CoolBlue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A5C9B4520C3918C0067BEAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2906112FF02AF35E3E5BAF2B /* Pods-CoolBlue.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoolBlue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Allam.CoolBlue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A5C9B4720C3918C0067BEAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8BB9D47D41B2311B787F61E /* Pods-CoolBlueTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoolBlueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Allam.CoolBlueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolBlue.app/CoolBlue";
+			};
+			name = Debug;
+		};
+		5A5C9B4820C3918C0067BEAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B87A132024FE81A08C37AA1C /* Pods-CoolBlueTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoolBlueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Allam.CoolBlueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolBlue.app/CoolBlue";
+			};
+			name = Release;
+		};
+		5A5C9B4A20C3918C0067BEAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5B7C489E5ABE7CCEFDE00AC /* Pods-CoolBlueUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoolBlueUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Allam.CoolBlueUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoolBlue;
+			};
+			name = Debug;
+		};
+		5A5C9B4B20C3918C0067BEAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A73628B058821C3B8D77FB16 /* Pods-CoolBlueUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoolBlueUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Allam.CoolBlueUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoolBlue;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A5C9B1620C3918C0067BEAA /* Build configuration list for PBXProject "CoolBlue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A5C9B4120C3918C0067BEAA /* Debug */,
+				5A5C9B4220C3918C0067BEAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A5C9B4320C3918C0067BEAA /* Build configuration list for PBXNativeTarget "CoolBlue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A5C9B4420C3918C0067BEAA /* Debug */,
+				5A5C9B4520C3918C0067BEAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A5C9B4620C3918C0067BEAA /* Build configuration list for PBXNativeTarget "CoolBlueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A5C9B4720C3918C0067BEAA /* Debug */,
+				5A5C9B4820C3918C0067BEAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A5C9B4920C3918C0067BEAA /* Build configuration list for PBXNativeTarget "CoolBlueUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A5C9B4A20C3918C0067BEAA /* Debug */,
+				5A5C9B4B20C3918C0067BEAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A5C9B1320C3918C0067BEAA /* Project object */;
+}
