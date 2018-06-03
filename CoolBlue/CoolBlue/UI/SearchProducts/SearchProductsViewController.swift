@@ -40,8 +40,8 @@ class SearchProductsViewController: UIViewController {
         outputs.products
             .debug("Binding tableview")
             .bind(to: tableView.rx.items(cellIdentifier: "ProductCell")) {
-                (index, productObj: Product, cell:UITableViewCell) in
-                cell.textLabel?.text = productObj.productName
+                [unowned self](index, product: Product, cell:ProductTableViewCell) in
+                cell.configureCell(with: self.viewModel.getCellViewModel(with: product))
             }
             .disposed(by: disposeBag)
 

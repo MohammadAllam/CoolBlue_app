@@ -14,6 +14,9 @@
 		5A1F732820C3DF0900ED70D3 /* AccessoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F732720C3DF0900ED70D3 /* AccessoryCollectionViewCell.swift */; };
 		5A1F732A20C3DFAD00ED70D3 /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F732920C3DFAD00ED70D3 /* ReviewCollectionViewCell.swift */; };
 		5A1F732C20C3DFBD00ED70D3 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F732B20C3DFBD00ED70D3 /* ReviewsViewController.swift */; };
+		5A1F732F20C3EBE400ED70D3 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F732E20C3EBE400ED70D3 /* ProductTableViewCell.swift */; };
+		5A1F733120C3EC0400ED70D3 /* USPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F733020C3EC0400ED70D3 /* USPTableViewCell.swift */; };
+		5A1F733320C3ECD400ED70D3 /* String+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F733220C3ECD400ED70D3 /* String+Extentions.swift */; };
 		5A5C9B1F20C3918C0067BEAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B1E20C3918C0067BEAA /* AppDelegate.swift */; };
 		5A5C9B2420C3918C0067BEAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A5C9B2220C3918C0067BEAA /* Main.storyboard */; };
 		5A5C9B2620C3918C0067BEAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A5C9B2520C3918C0067BEAA /* Assets.xcassets */; };
@@ -65,6 +68,9 @@
 		5A1F732720C3DF0900ED70D3 /* AccessoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A1F732920C3DFAD00ED70D3 /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A1F732B20C3DFBD00ED70D3 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
+		5A1F732E20C3EBE400ED70D3 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		5A1F733020C3EC0400ED70D3 /* USPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USPTableViewCell.swift; sourceTree = "<group>"; };
+		5A1F733220C3ECD400ED70D3 /* String+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extentions.swift"; sourceTree = "<group>"; };
 		5A5C9B1B20C3918C0067BEAA /* CoolBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5C9B1E20C3918C0067BEAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A5C9B2320C3918C0067BEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +133,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A1F732D20C3EBB000ED70D3 /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A1F732E20C3EBE400ED70D3 /* ProductTableViewCell.swift */,
+				5A1F733020C3EC0400ED70D3 /* USPTableViewCell.swift */,
+			);
+			path = ProductCell;
+			sourceTree = "<group>";
+		};
 		5A5C9B1220C3918C0067BEAA = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +231,7 @@
 		5A5C9B4F20C3944E0067BEAA /* SearchProducts */ = {
 			isa = PBXGroup;
 			children = (
+				5A1F732D20C3EBB000ED70D3 /* ProductCell */,
 				5A5C9B5020C3947A0067BEAA /* SearchProductsViewController.swift */,
 				5A5C9B5220C3948C0067BEAA /* SearchProductsViewModel.swift */,
 			);
@@ -234,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				5A5C9B6020C3A8FA0067BEAA /* UIScrollView+Extentions.swift */,
+				5A1F733220C3ECD400ED70D3 /* String+Extentions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -558,6 +575,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -567,6 +585,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -636,10 +655,13 @@
 				5A1F732C20C3DFBD00ED70D3 /* ReviewsViewController.swift in Sources */,
 				5A5C9B5920C39CD10067BEAA /* CoolBlueAPI.swift in Sources */,
 				5A5C9B5520C39CAC0067BEAA /* ProductService.swift in Sources */,
+				5A1F732F20C3EBE400ED70D3 /* ProductTableViewCell.swift in Sources */,
+				5A1F733120C3EC0400ED70D3 /* USPTableViewCell.swift in Sources */,
 				5A5C9B5720C39CBA0067BEAA /* ProductServiceType.swift in Sources */,
 				5AE8CC3E20C3D609006472A6 /* ImageCollectionViewCell.swift in Sources */,
 				5A5C9B5320C3948C0067BEAA /* SearchProductsViewModel.swift in Sources */,
 				5A1F732220C3DA7100ED70D3 /* SpecificationCollectionViewCell.swift in Sources */,
+				5A1F733320C3ECD400ED70D3 /* String+Extentions.swift in Sources */,
 				5AE8CC3020C3B80E006472A6 /* ProductViewModel.swift in Sources */,
 				5AE8CC3C20C3D190006472A6 /* ImagesViewController.swift in Sources */,
 				5AE8CC3420C3D091006472A6 /* Review.swift in Sources */,

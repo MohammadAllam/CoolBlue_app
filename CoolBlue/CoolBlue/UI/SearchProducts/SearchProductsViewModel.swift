@@ -116,4 +116,51 @@ SearchViewModelOutput{
         return productsList[index]
     }
 
+    func getCellViewModel(with product:Product) -> ProductCellViewModel{
+
+        // Formatting the values to the desired string format
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        // Applying the format to the new and old prices
+        var oldPriceString:String?
+        if let oldPrice = product.listPriceIncVat {
+
+            oldPriceString = currencyFormatter.string(from: NSNumber(value: oldPrice))
+        }
+        let newPriceString = currencyFormatter.string(from: NSNumber(value: product.salesPriceIncVat ?? 0.0)) ?? "0,0"
+        // Reformatting the USPs
+        let displayedUSPs = product.USPs?.map({ oldText -> String in
+            return "•  \(oldText) end of text"
+        })
+
+        return ProductCellViewModel(coolBlueTitle: product.coolbluesChoiceInformationTitle,
+                                    title: product.productName ?? "",
+                                    reviewAvg: Double(product.reviewInformation?.reviewSummary?.reviewAverage ?? 0.0)/2,
+                                    reviewCount: String(product.reviewInformation?.reviewSummary?.reviewCount ?? 0),
+                                    usp: displayedUSPs ?? [],
+                                    oldPrice: oldPriceString,
+                                    newPrice: newPriceString,
+                                    availabilityFlag: product.availabilityState ?? 2,
+                                    thumbnail: product.productImage,
+                                    promoIconName: product.promoIcon?.type,
+                                    promoIconText: product.promoIcon?.text,
+                                    nextDayDeliveryFlag: product.nextDayDelivery ?? false)
+    }
+
+}
+
+struct ProductCellViewModel{
+    let coolBlueTitle:String?
+    let title:String
+    let reviewAvg:Double
+    let reviewCount:String
+    let usp:[String]
+    let oldPrice:String?
+    let newPrice:String
+    let availabilityFlag:Int
+    let thumbnail:String?
+    let promoIconName:String?
+    let promoIconText:String?
+    let nextDayDeliveryFlag:Bool
 }
