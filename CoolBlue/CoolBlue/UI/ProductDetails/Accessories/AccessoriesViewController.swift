@@ -1,5 +1,5 @@
 //
-//  ImagesViewController.swift
+//  AccessoriesViewController.swift
 //  CoolBlue
 //
 //  Created by Mohammad Allam on 6/3/18.
@@ -10,10 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ImagesViewController: UIViewController {
+class AccessoriesViewController: UIViewController {
 
     // MARK: IBOutlets
-    @IBOutlet weak var collectionView_images: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     // MARK: Private
     private var disposeBag = DisposeBag()
@@ -22,11 +22,9 @@ class ImagesViewController: UIViewController {
         if let images = images{
             images
                 .debug("Binding images colectionView")
-                .bind(to: collectionView_images.rx.items(cellIdentifier: "cell")) {
-                    (index, imageURLString: String, cell:ImageCollectionViewCell) in
-                    if let url = URL(string: imageURLString){
-                        cell.imageView_thumbnail.af_setImage(withURL: url)
-                    }
+                .bind(to: collectionView.rx.items(cellIdentifier: "cell")) {
+                    (index, accessoryID: String, cell:AccessoryCollectionViewCell) in
+                    cell.textView_text.text = accessoryID
                 }
                 .disposed(by: disposeBag)
         }

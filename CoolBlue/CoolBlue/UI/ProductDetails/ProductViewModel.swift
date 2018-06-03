@@ -19,6 +19,9 @@ protocol ProductViewModelOutput {
     /// Emits product rating average
     var ratingAvg: Observable<String>! { get }
 
+    /// Emits product next day delivery flag
+    var nextDayDelivery: Observable<Bool>! { get }
+
     /// Emits product new price
     var newPrice: Observable<String>! { get }
 
@@ -70,6 +73,9 @@ ProductViewModelOutput{
     var ratingAvg: Observable<String>!{
         return ratingAvgProperty.asObservable()
     }
+    var nextDayDelivery: Observable<Bool>! {
+        return nextDayDeliveryProperty.asObservable()
+    }
     var newPrice: Observable<String>!{
         return newPriceProperty.asObservable()
     }
@@ -107,6 +113,7 @@ ProductViewModelOutput{
     private let titleProperty = Variable<String>("")
     private let ratingCountProperty = Variable<String>("")
     private let ratingAvgProperty = Variable<String>("")
+    private let nextDayDeliveryProperty = Variable<Bool>(false)
     private let oldPriceProperty = Variable<String>("")
     private let newPriceProperty = Variable<String>("")
     private let imageProperty = Variable<String>("")
@@ -125,24 +132,66 @@ ProductViewModelOutput{
         self.productService = inputService
         currentProduct = .just(inputProduct)
 
+        // Setting data that already exists
         if let name = inputProduct.productName{
             titleProperty.value = name
         }
         if let count = inputProduct.reviewInformation?.reviewSummary?.reviewCount{
-            ratingCountProperty.value = "\(count)"
+            ratingCountProperty.value = "Review count :\(count)"
         }
         if let avg = inputProduct.reviewInformation?.reviewSummary?.reviewAverage{
-            ratingAvgProperty.value = "\(avg)"
+            ratingAvgProperty.value = "Review avg :\(avg)"
+        }
+        if let nextDay = inputProduct.nextDayDelivery{
+            nextDayDeliveryProperty.value = nextDay
         }
         if let oldPrice = inputProduct.listPriceIncVat{
-            oldPriceProperty.value = "\(oldPrice)"
+            oldPriceProperty.value = "List price :\(oldPrice)"
         }
         if let newPrice = inputProduct.salesPriceIncVat{
-            newPriceProperty.value = "\(newPrice)"
+            newPriceProperty.value = "Sales price :\(newPrice)"
         }
         if let imageURLString = inputProduct.productImage{
             imageProperty.value = imageURLString
         }
+
+        // Fetching detailed item to fill the rest of the data
+        currentProduct = productService.productDetails(with: inputProduct.productId!).asObservable()
+        currentProduct.subscribe(onNext: { [unowned self] productItem in
+
+            if let desc = productItem.productText{
+                self.descriptionProperty.value = desc
+            }
+            if let list = productItem.productImages{
+                self.imagesProperty.value = list
+            }
+            if let list = productItem.specificationSummary{
+                self.specificationsProperty.value = list
+            }
+            if let list = productItem.deliveredWith{
+                self.deliveredWithProperty.value = list
+            }
+            var prosConsDic:[String:[String]] = [:]
+            if let pros = productItem.pros{
+                prosConsDic["pros"] = pros
+            }
+            if let cons = productItem.cons{
+                prosConsDic["pros"] = cons
+            }
+            self.prosConsProperty.value = prosConsDic
+
+            if let list = productItem.reviewInformation?.reviews{
+                self.reviewsProperty.value = list
+            }
+            if let list = productItem.recommendedAccessories{
+                var returnedList = [String]()
+                list.forEach({ value in
+                    returnedList.append("\(value)")
+                })
+                self.accessoriesProperty.value = returnedList
+            }
+        }).disposed(by: disposeBag)
+
     }
 }
 
