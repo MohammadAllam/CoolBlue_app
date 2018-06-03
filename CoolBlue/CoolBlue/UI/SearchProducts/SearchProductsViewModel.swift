@@ -41,11 +41,15 @@ SearchViewModelOutput{
     }
 
     // MARK: Private
+    private var productService:ProductServiceType
     private var productsProperty = Variable<[String]>([])
     private var productsList = [String]([])
 
     // MARK: Init
-    init(disposeBag:DisposeBag) {
+    init(inputService:ProductServiceType = ProductService(),
+        disposeBag:DisposeBag) {
+
+        productService = inputService
 
         query.asObservable()
             .subscribe(onNext: { [unowned self] queryString in
@@ -53,10 +57,18 @@ SearchViewModelOutput{
                     self.productsProperty.value = []
                     return
                 }
-                self.productsProperty.value = ["1",
-                                               "2",
-                                               "3",
-                                               "4",]
+                self.productService.discoverProducts(with: queryString,
+                                                                     page: 1)
+                    .subscribe(onNext: { (products) in
+                        var tempList = [String]()
+                        products.forEach({ productObj in
+                            if let name = productObj.productName{
+                                tempList.append(name)
+                            }
+                        })
+                        self.productsProperty.value = tempList
+                    })
+                .disposed(by: disposeBag)
             })
             .disposed(by: disposeBag)
 

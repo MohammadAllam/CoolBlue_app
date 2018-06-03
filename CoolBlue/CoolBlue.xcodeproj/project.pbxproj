@@ -16,6 +16,11 @@
 		5A5C9B3F20C3918C0067BEAA /* CoolBlueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B3E20C3918C0067BEAA /* CoolBlueUITests.swift */; };
 		5A5C9B5120C3947A0067BEAA /* SearchProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B5020C3947A0067BEAA /* SearchProductsViewController.swift */; };
 		5A5C9B5320C3948C0067BEAA /* SearchProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B5220C3948C0067BEAA /* SearchProductsViewModel.swift */; };
+		5A5C9B5520C39CAC0067BEAA /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B5420C39CAC0067BEAA /* ProductService.swift */; };
+		5A5C9B5720C39CBA0067BEAA /* ProductServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B5620C39CBA0067BEAA /* ProductServiceType.swift */; };
+		5A5C9B5920C39CD10067BEAA /* CoolBlueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B5820C39CD10067BEAA /* CoolBlueAPI.swift */; };
+		5A5C9B5B20C39CE50067BEAA /* CoolBlueAPIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B5A20C39CE50067BEAA /* CoolBlueAPIConstants.swift */; };
+		5A5C9B5D20C39F170067BEAA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B5C20C39F170067BEAA /* Product.swift */; };
 		5D98299A4FF9C4F3E0797513 /* Pods_CoolBlueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EE1ECA80EDF75B4CAC8BFB /* Pods_CoolBlueUITests.framework */; };
 		8AABCE056D7EC99E03F5ACCD /* Pods_CoolBlueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D3662A99F5ECC2748D3D84 /* Pods_CoolBlueTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +60,11 @@
 		5A5C9B4020C3918C0067BEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A5C9B5020C3947A0067BEAA /* SearchProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductsViewController.swift; sourceTree = "<group>"; };
 		5A5C9B5220C3948C0067BEAA /* SearchProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductsViewModel.swift; sourceTree = "<group>"; };
+		5A5C9B5420C39CAC0067BEAA /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		5A5C9B5620C39CBA0067BEAA /* ProductServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceType.swift; sourceTree = "<group>"; };
+		5A5C9B5820C39CD10067BEAA /* CoolBlueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolBlueAPI.swift; sourceTree = "<group>"; };
+		5A5C9B5A20C39CE50067BEAA /* CoolBlueAPIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolBlueAPIConstants.swift; sourceTree = "<group>"; };
+		5A5C9B5C20C39F170067BEAA /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		5BBEF1C05DFB5F2D049F4B2F /* Pods-CoolBlue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue.debug.xcconfig"; sourceTree = "<group>"; };
 		A73628B058821C3B8D77FB16 /* Pods-CoolBlueUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueUITests/Pods-CoolBlueUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A8BB9D47D41B2311B787F61E /* Pods-CoolBlueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueTests/Pods-CoolBlueTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +167,10 @@
 		5A5C9B4D20C392950067BEAA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5A5C9B5420C39CAC0067BEAA /* ProductService.swift */,
+				5A5C9B5620C39CBA0067BEAA /* ProductServiceType.swift */,
+				5A5C9B5820C39CD10067BEAA /* CoolBlueAPI.swift */,
+				5A5C9B5A20C39CE50067BEAA /* CoolBlueAPIConstants.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -164,6 +178,7 @@
 		5A5C9B4E20C3929C0067BEAA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5A5C9B5C20C39F170067BEAA /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -430,11 +445,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlue/Pods-CoolBlue-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -496,8 +517,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A5C9B5120C3947A0067BEAA /* SearchProductsViewController.swift in Sources */,
+				5A5C9B5D20C39F170067BEAA /* Product.swift in Sources */,
+				5A5C9B5920C39CD10067BEAA /* CoolBlueAPI.swift in Sources */,
+				5A5C9B5520C39CAC0067BEAA /* ProductService.swift in Sources */,
+				5A5C9B5720C39CBA0067BEAA /* ProductServiceType.swift in Sources */,
 				5A5C9B5320C3948C0067BEAA /* SearchProductsViewModel.swift in Sources */,
 				5A5C9B1F20C3918C0067BEAA /* AppDelegate.swift in Sources */,
+				5A5C9B5B20C39CE50067BEAA /* CoolBlueAPIConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
