@@ -12,6 +12,7 @@ target 'CoolBlue' do
   pod 'RxCocoa',    '~> 4.0'
 
   # UI
+  pod 'Cosmos'
   pod 'AlamofireImage'
 
   target 'CoolBlueTests' do
