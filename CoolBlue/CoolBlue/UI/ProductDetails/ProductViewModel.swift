@@ -32,7 +32,7 @@ protocol ProductViewModelOutput {
     var images: Observable<[String]>! { get }
 
     /// Emits a specifications list
-    var specifications: Observable<[String]>! { get }
+    var specifications: Observable<[SpecificationSum]>! { get }
 
     /// Emits a pros-cons list
     var prosCons: Observable<[String:[String]]>! { get }
@@ -44,7 +44,7 @@ protocol ProductViewModelOutput {
     var description: Observable<String>! { get }
 
     /// Emits reviews list
-    var reviews: Observable<[String]>! { get }
+    var reviews: Observable<[Review]>! { get }
 
     /// Emits recommended accessories
     var accessories: Observable<[String]>! { get }
@@ -85,7 +85,7 @@ ProductViewModelOutput{
     var deliveredWith: Observable<[String]>!{
         return deliveredWithProperty.asObservable()
     }
-    var specifications: Observable<[String]>!{
+    var specifications: Observable<[SpecificationSum]>!{
         return specificationsProperty.asObservable()
     }
     var prosCons: Observable<[String:[String]]>!{
@@ -94,7 +94,7 @@ ProductViewModelOutput{
     var description: Observable<String>!{
         return descriptionProperty.asObservable()
     }
-    var reviews: Observable<[String]>!{
+    var reviews: Observable<[Review]>!{
         return reviewsProperty.asObservable()
     }
     var accessories: Observable<[String]>!{
@@ -112,10 +112,10 @@ ProductViewModelOutput{
     private let imageProperty = Variable<String>("")
     private let imagesProperty = Variable<[String]>([])
     private let deliveredWithProperty = Variable<[String]>([])
-    private let specificationsProperty = Variable<[String]>([])
+    private let specificationsProperty = Variable<[SpecificationSum]>([])
     private let prosConsProperty = Variable<[String:[String]]>([:])
     private let descriptionProperty = Variable<String>("")
-    private let reviewsProperty = Variable<[String]>([])
+    private let reviewsProperty = Variable<[Review]>([])
     private let accessoriesProperty = Variable<[String]>([])
 
     // MARK: Init

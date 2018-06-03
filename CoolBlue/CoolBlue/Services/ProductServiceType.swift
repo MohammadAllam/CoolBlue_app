@@ -11,4 +11,5 @@ import RxSwift
 
 protocol ProductServiceType {
     func discoverProducts(with query: String,page:Int) -> Observable<[Product]>
+    func productDetails(with productID: Int) -> Observable<Product>
 }
