@@ -32,7 +32,7 @@ class SearchProductsViewController: UIViewController {
 
     // MARK: Binding
     func configureViewModel() {
-        viewModel = SearchViewModel(disposeBag: disposeBag)
+        viewModel = SearchViewModel()
 
         let inputs = viewModel.inputs
         let outputs = viewModel.outputs
@@ -73,6 +73,7 @@ class SearchProductsViewController: UIViewController {
         // Configuring dynamic table view cells height
         tableView.estimatedRowHeight = 40
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.accessibilityLabel = "SearchTable"
     }
 
     // MARK: Navigation

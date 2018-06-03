@@ -59,8 +59,7 @@ SearchViewModelOutput{
     private let newQueryProperty = BehaviorSubject<Bool>(value: true)
 
     // MARK: Init
-    init(inputService:ProductServiceType = ProductService(),
-         disposeBag:DisposeBag) {
+    init(inputService:ProductServiceType = ProductService()) {
 
         productService = inputService
 
