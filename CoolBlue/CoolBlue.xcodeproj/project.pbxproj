@@ -17,7 +17,7 @@
 		5A1F732F20C3EBE400ED70D3 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F732E20C3EBE400ED70D3 /* ProductTableViewCell.swift */; };
 		5A1F733120C3EC0400ED70D3 /* USPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F733020C3EC0400ED70D3 /* USPTableViewCell.swift */; };
 		5A1F733320C3ECD400ED70D3 /* String+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F733220C3ECD400ED70D3 /* String+Extentions.swift */; };
-		5A1F733920C40DC900ED70D3 /* ProductServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F733820C40DC900ED70D3 /* ProductServiceMock.swift */; };
+		5A1F733C20C416E400ED70D3 /* ProductServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F733B20C416E400ED70D3 /* ProductServiceMock.swift */; };
 		5A5C9B1F20C3918C0067BEAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C9B1E20C3918C0067BEAA /* AppDelegate.swift */; };
 		5A5C9B2420C3918C0067BEAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A5C9B2220C3918C0067BEAA /* Main.storyboard */; };
 		5A5C9B2620C3918C0067BEAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A5C9B2520C3918C0067BEAA /* Assets.xcassets */; };
@@ -72,7 +72,7 @@
 		5A1F732E20C3EBE400ED70D3 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		5A1F733020C3EC0400ED70D3 /* USPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USPTableViewCell.swift; sourceTree = "<group>"; };
 		5A1F733220C3ECD400ED70D3 /* String+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extentions.swift"; sourceTree = "<group>"; };
-		5A1F733820C40DC900ED70D3 /* ProductServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceMock.swift; sourceTree = "<group>"; };
+		5A1F733B20C416E400ED70D3 /* ProductServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceMock.swift; sourceTree = "<group>"; };
 		5A5C9B1B20C3918C0067BEAA /* CoolBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5C9B1E20C3918C0067BEAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A5C9B2320C3918C0067BEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,10 +144,10 @@
 			path = ProductCell;
 			sourceTree = "<group>";
 		};
-		5A1F733720C40DA600ED70D3 /* Mock */ = {
+		5A1F733A20C416CE00ED70D3 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				5A1F733820C40DC900ED70D3 /* ProductServiceMock.swift */,
+				5A1F733B20C416E400ED70D3 /* ProductServiceMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -191,7 +191,7 @@
 		5A5C9B3220C3918C0067BEAA /* CoolBlueTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A1F733720C40DA600ED70D3 /* Mock */,
+				5A1F733A20C416CE00ED70D3 /* Mock */,
 				5A5C9B3320C3918C0067BEAA /* CoolBlueTests.swift */,
 				5A5C9B3520C3918C0067BEAA /* Info.plist */,
 			);
@@ -696,7 +696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A5C9B3420C3918C0067BEAA /* CoolBlueTests.swift in Sources */,
-				5A1F733920C40DC900ED70D3 /* ProductServiceMock.swift in Sources */,
+				5A1F733C20C416E400ED70D3 /* ProductServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

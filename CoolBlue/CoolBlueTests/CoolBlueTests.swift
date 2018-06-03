@@ -12,14 +12,14 @@ import RxSwift
 @testable import CoolBlue
 
 class CoolBlueTests: XCTestCase {
-    var serviceMock:productServiceMock!
+    var serviceMock:ProductServiceMock!
     var viewModel:SearchViewModel!
     var disposeBag:DisposeBag!
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        serviceMock = productServiceMock()
+        serviceMock = ProductServiceMock()
         disposeBag = DisposeBag()
         viewModel = SearchViewModel(inputService: serviceMock)
     }
