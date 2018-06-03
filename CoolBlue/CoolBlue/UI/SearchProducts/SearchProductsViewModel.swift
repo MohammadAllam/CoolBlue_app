@@ -110,4 +110,10 @@ SearchViewModelOutput{
             })
 
     }
+
+    func getProduct(atIndex index:Int) -> Product{
+
+        return productsList[index]
+    }
+
 }
